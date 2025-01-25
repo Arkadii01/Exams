@@ -42,5 +42,6 @@ def get_tasks():
             text = '\n'.join([word for word in text if word != ''])
             with open('texts.txt', 'a', encoding='utf-8') as file:
                 file.write(f'{text}\n')
+# //span[@class="prob_nums"]/a
     
 get_tasks()
