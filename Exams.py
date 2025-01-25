@@ -24,6 +24,10 @@ def get_links():
         text_to_file('//a[@class="Link Link_black"]')
         if thing == 'https://math-ege.sdamgia.ru/':
             text_to_file('//a[@class="Link VariantLink LarinVariants-Link"]')
+
+# переход на корневой каталог
+def leave():
+    pass
       
 # получение задач из вариантов
 def get_tasks():
@@ -36,7 +40,7 @@ def get_tasks():
         for task in tasks:
             text = task.text.split('\n')
             text = '\n'.join([word for word in text if word != ''])
-            with open('tesks.txt', 'a', encoding='utf-8') as file:
+            with open('texts.txt', 'a', encoding='utf-8') as file:
                 file.write(f'{text}\n')
     
 get_tasks()
